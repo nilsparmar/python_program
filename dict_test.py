@@ -47,8 +47,8 @@ class System_data:
 		for i in range(len(my_data['value'])-1):
 			if self.vm_name == my_data['value'][i]['name']:
 				print("True")
-			else :
-				print("False")
+		else :
+			    print("False")
 
 		
 
