@@ -27,8 +27,10 @@ class System_data:
 		x='vm-1012'
 		for key in v:
 			# for i in range(len(v['value'])):
-			x == v[key][1]['vm']
-			print("True")
+			if x == v[key][1]['vm']:
+				print("True")
+			else:
+				print("False")
 				
 
 		
