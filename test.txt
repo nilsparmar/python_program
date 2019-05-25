@@ -2,6 +2,6 @@ Jesus loves you...
 <<<<<<< HEAD
 Hello..This is example to insert in github.
 =======
-
+--------------
 This comment by sanju
 >>>>>>> 07b3fe797005c558c4931222234a10cf484a3db7
