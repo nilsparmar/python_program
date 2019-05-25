@@ -45,10 +45,18 @@ class System_data:
 		self.vm_name = vm_name
 		
 		for i in range(len(my_data['value'])-1):
-			if self.vm_name == my_data['value'][i]['name']:
+			if vm_name == my_data['value'][i]['name']:
 				print("True")
-			else :
-				print("False")
+				return True
+		
+		# Removed else out of the for loop, only return false, when for is over 
+		else:
+			print("False")
+			return False
+
+
+
+#### Well Done Bro :)	#######				
 
 		
 
@@ -56,6 +64,10 @@ class System_data:
 ob1 = System_data(1,'nilsparmar','nils123')
 
 ob1.get_vm('SP3-RHEL-68-2x2-REG-2-DATA-1')
+
+ob1.get_vm('no vm')
+
+
 
 
 
