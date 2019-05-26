@@ -45,17 +45,44 @@ class System_data:
 		self.vm_name = vm_name
 		
 		for i in range(len(my_data['value'])-1):
-			if self.vm_name == my_data['value'][i]['name']:
-				print("True")
-		else :
-			    print("False")
+			if vm_name == my_data['value'][i]['name']:
+				print(vm_name)
+				return True
+				
+		else:
+			print("VM Not Found")
+			return False
 
-		
 
+	def power_on(self, vm_name):
+		for i in range(len(my_data['value'])-1):
+				if vm_name == my_data['value'][i]['name']:
+					ind = i
+					p_state = my_data['value'][ind]['power_state']
+					print(p_state)
+					if p_state == 'POWERED_OFF':
+						my_data['value'][ind]['power_state'] = 'POWERED_OFF'
+						print("Now its turned to POWERED_ON State")
+
+	def power_off(self, vm_name):
+		for i in range(len(my_data['value'])-1):
+				if vm_name == my_data['value'][i]['name']:
+					ind = i
+					p_state = my_data['value'][ind]['power_state']
+					print(p_state)
+					if p_state == 'POWERED_ON':
+						my_data['value'][ind]['power_state'] = 'POWERED_ON'
+						print("Now its turned to POWERED_OFF State")
 	
 ob1 = System_data(1,'nilsparmar','nils123')
 
 ob1.get_vm('SP3-RHEL-68-2x2-REG-2-DATA-1')
+
+ob1.power_on('SP3-RHEL-68-2x2-REG-2-DATA-1')
+
+ob1.power_off('SP3-RHEL-68-2x2-REG-2-DATA-1')
+
+
 
 
 
