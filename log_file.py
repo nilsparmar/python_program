@@ -1,36 +1,33 @@
 import re
+import os
+
 
 class Logfile:
-	
+
+	def get_filepath(self):
+		self.path = 'D:\Study\Python\gitrecord\python_program\log.txt'
+		# path = str(input('Enter File Path:'))
+		# assert os.path.exists(self.path), "I did not find the file at, "+str(self.path)
+		with open(self.path) as myfile:
+			data = myfile.read()
+		return data
+
+
 	def count_err(self):
-		c_error = 0
-		c_info = 0
-		c_warning = 0
-
-		myfile=open("log.txt","r")
-		for x in myfile:
-			d=myfile.readline()
-			print(d)
-			c_err = re.compile(r'(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}.\d{3}) (\w*)')
-			regex_get = c_err.search(d)
-			result = regex_get.group(2)
-			if result == 'ERROR':
-				c_error = c_error + 1
-			elif result == 'INFO':
-				c_info = c_info + 1
-			elif result == 'WARNING':
-				c_warning = c_warning + 1
-
-		myfile.close()
-
-		print("TOTAL ERROR : ",c_error)
-		print("TOTAL WARNING : ",c_warning)
-		print("TOTAL INFORMTION : ",c_info)
+		self.path_result = self.get_filepath()
+		print(self.path_result)
+		
+			
+		r1 = re.findall(r"ERROR|WARNING|INFO",self.path_result)
+		print(r1)
 		
 		
+		print("Total ERRORS : ",r1.count('ERROR'))
+		print("Total WARNING : ",r1.count('WARNING'))
+		print("Total INFORMATION : ",r1.count('INFO'))
 		
-
-
+	
 ob = Logfile()
+ob.get_filepath()
 ob.count_err()
 	
