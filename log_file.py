@@ -6,7 +6,7 @@ class Logfile:
 
 	def get_filepath(self):
 		self.path = 'D:\Study\Python\gitrecord\python_program\log.txt'
-		# path = str(input('Enter File Path:'))
+		# path = (input(r'Enter File Path:')
 		# assert os.path.exists(self.path), "I did not find the file at, "+str(self.path)
 		with open(self.path) as myfile:
 			data = myfile.read()
