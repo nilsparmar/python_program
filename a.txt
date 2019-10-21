@@ -1,4 +1,8 @@
 NEW UPDATE AVAILABLE
 @@@@@@@@@@@@@@@@@@@@@@@@@
 **************************
+<<<<<<< HEAD
 DONE BY MASTER
+=======
+This is updated by program 
+>>>>>>> program
