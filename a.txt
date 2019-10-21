@@ -1,4 +1,7 @@
 NEW UPDATE AVAILABLE
 @@@@@@@@@@@@@@@@@@@@@@@@@
 **************************
-This is updated by program 
+This is updated by program
+
+add to remote origin
+
