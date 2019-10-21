@@ -1,7 +1,14 @@
 NEW UPDATE AVAILABLE
 @@@@@@@@@@@@@@@@@@@@@@@@@
 **************************
+<<<<<<< HEAD
 This is updated by program
 
 add to remote origin
+=======
+<<<<<<< HEAD
+DONE BY MASTER
+=======
+This is updated by program 
+>>>>>>> dcb12150219d6f5d01fc8baf7504af967763bcaf
 
